@@ -1,19 +1,31 @@
 head.ready(function() {
 
-	// $(document).on("click", function(){
-	// 	$(".js-popup").hide();
-	// });
+	$('.js-menu').hover(function(){
+		$(this).find('.js-menu-drop').slideToggle();
+	});
 
-	// function scrollFixedElements() {
-	//     var scroll_left = $(this).scrollLeft();
-	//     $(".fixed-element").css({
-	//         left: -scroll_left
-	//     });
-	// }
-	// scrollFixedElements();
-	// $(window).scroll(function(){
-	//     scrollFixedElements()
-	// });
+	$('.slider-for').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		fade: true,
+		asNavFor: '.slider-nav'
+	});
+	$('.slider-nav').slick({
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		asNavFor: '.slider-for',
+		arrows: true,
+		dots: false,
+		centerMode: false,
+		focusOnSelect: true
+	});
 
-	console.log($('body').html());
+	$(function() {
+		$.datepicker.setDefaults(
+			$.extend($.datepicker.regional["ru"])
+		);
+		$("#datepicker").datepicker();
+	});
+
 });

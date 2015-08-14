@@ -50,6 +50,8 @@
 					font-size: 14px
 					color: $blue-d
 					+arial 
+					&:hover
+						color: $blue 
 			&__lang
 				float: left
 				+clr
@@ -59,12 +61,15 @@
 					margin-right: 10px
 					padding: 9px 6px
 					font-size: 0
-					opacity: 0.5
 					&.is-active
 						border: 1px solid $grey
 						-webkit-border-radius: 2px
 						border-radius: 2px
-						opacity: 1
+						span
+							&.ukr
+								+s(ukr-a)
+							&.eng
+								+s(eng-a)
 					span
 						display: inline-block
 						vertical-align: middle
@@ -84,36 +89,56 @@
 						right: 5px
 						cursor: pointer
 						+s(search)
-						&:hover
+					&:hover
+						&:after
 							opacity: 0.5
 					input
 						width: 160px
-						height: 22px
 						padding: 2px 23px 5px 5px
-						border: 1px solid $grey
-						-webkit-border-radius: 2px
-						border-radius: 2px
-						+box
 	&__menu
 		background: #E7E7E8
-		ul
+		ul.menu
 			padding: 0 10px
 			li
+				position: relative
 				display: inline-block
 				vertical-align: middle
-				padding: 15px 10px
+				&:hover
+					background: $blue
+					a
+						color: #FFF
 				a
 					display: inline-block
 					vertical-align: middle
+					padding: 15px 10px
 					text-transform: uppercase
 					text-decoration: none
 					font-size: 17px
 					font-weight: bold
 					color: #58585A
 					+open 
+				ul.menu__drop
+					display: none
+					position: absolute
+					top: 53px
+					left: 0
+					padding: 10px 15px
+					background: $blue 
+					> li
+						display: block
+						> a
+							padding: 5px 0
+							margin-bottom: 10px
+							color: #FFF
+							&:last-child
+								margin-bottom: 0
+							&:hover
+								text-decoration: underline
 
 .main
-	margin: 20px 15px
+	padding: 20px 15px
+	+clr
+
 .sidebar
 	float: left
 	width: 225px
@@ -122,12 +147,11 @@
 		margin-bottom: 30px
 		h2
 			margin-bottom: 15px
-			text-transform: uppercase
 			font-size: 17px
 			font-weight: bold
 			color: $blue
 			+open
-		> p
+		> span
 			display: block
 			margin-bottom: 20px
 			font-size: 15px
@@ -144,6 +168,21 @@
 					font-weight: bold
 					color: #58585A
 					+arial 
+					&:hover
+						color: $blue 
+		> p
+			display: block
+			margin-bottom: 10px
+			font-size: 14px
+			color: #3E3E3E
+			+georgia
+		> input
+			width: 225px
+		> .btn
+			padding: 5px 20px
+			margin-top: 5px
+		> img
+			margin-bottom: 20px
 	&__item
 		margin-bottom: 20px
 		&:last-child
@@ -165,30 +204,6 @@
 		img
 			margin-top: 10px
 
-.socials
-	ul
-		font-size: 0
-		+justify
-		li
-			display: inline-block
-			vertical-align: middle
-			a
-				display: block
-				span
-					display: block
-					&.fb
-						+s(fb)
-					&.tw
-						+s(tw)
-					&.vm
-						+s(vm)
-					&.ins
-						+s(ins)
-					&.pi
-						+s(pi)
-					&.yt
-						+s(yt)
-
 .wrap
 	overflow: hidden
 	&__top
@@ -209,26 +224,12 @@
 			+georgia
 			a
 				color: $blue 
-		.btn
-			display: inline-block
-			vertical-align: top
-			margin-right: 20px
-			padding: 10px 15px
-			background: $blue 
-			-webkit-border-radius: 3px
-			border-radius: 3px
-			text-transform: uppercase
-			font-size: 15px
-			font-weight: bold
-			color: #FFF
-			+open 
 	&__inn
 		margin-bottom: 20px
 		h2
 			position: relative
 			display: block
-			padding-bottom: 20px
-			text-transform: uppercase
+			padding-bottom: 40px
 			font-size: 22px
 			font-weight: bold
 			color: $blue
@@ -236,14 +237,14 @@
 			&:after
 				content: ""
 				position: absolute
-				bottom: 0
+				bottom: 20px
 				left: 0
 				right: 0
 				width: 100%
 				height: 5px
 				background-image: linear-gradient(left, $blue 0, $blue 60px, #f2f2f2 60px, #f2f2f2 100%) 
 	&__item
-		margin-top: 20px
+		margin-bottom: 20px
 		+clr
 	&__img
 		float: left
@@ -270,3 +271,119 @@
 			+georgia
 			> a
 				color: $blue 
+	&__slider
+		width: 545px
+		.slide
+			position: relative
+			display: inline-block
+			vertical-align: top
+			font-size: 0
+			img
+				width: 100%
+			&__text
+				position: absolute
+				left: 0
+				right: 0
+				bottom: 0
+				background: #555557
+				padding: 20px 20px 20px 10px
+				font-size: 14px
+				color: #FFF
+				+georgia 
+				p
+					margin-bottom: 20px
+		.slider-nav
+			position: relative
+			margin: 5px 25px
+			img
+				margin: 0 5px
+				&:last-child
+					margin-right: 0
+			.slick-list
+				overflow: hidden
+			.slick-prev, .slick-next
+				font-size: 0
+				position: absolute
+				top: 40%
+			.slick-prev
+				left: -20px
+				+s(prev)
+			.slick-next
+				right: -20px
+				+s(next)
+
+.footer
+	&__inn
+		background: #E7E7E8 
+		padding: 40px 20px 25px
+	&__inner
+		margin-bottom: 15px
+		+justify
+		+clr
+		.column
+			display: inline-block
+			vertical-align: top
+			width: 25%
+			padding-right: 2%
+			text-align: left
+	&__item
+		margin-bottom: 15px
+		line-height: 1.4
+		h2
+			font-size: 13px
+			font-weight: bold
+			color: $blue-d
+			margin-bottom: 3px
+			+arial
+			&.title
+				margin-bottom: 20px
+		ul
+			li
+				display: block
+				padding: 3px 0
+				a
+					font-size: 12px
+					font-weight: bold
+					color: #58585A
+					+arial 
+					&:hover
+						color: $blue 
+	&__wrap
+		position: relative
+	&__social
+		h2
+			margin-bottom: 15px
+			font-size: 13px
+			font-weight: bold
+			color: #58585A
+			+arial
+		.socials
+			ul
+				text-align: left
+				li
+					margin-right: 20px
+	&__info
+		position: absolute
+		bottom: 0
+		right: 0
+		a
+			display: inline-block
+			vertical-align: bottom
+			margin-left: 20px
+			text-transform: uppercase
+			font-size: 13px
+			font-weight: bold
+			color: $blue-d
+			+arial 
+			&:hover
+				color: $blue 
+	&__bottom
+		background: #FFF
+		padding: 20px
+		p
+			font-size: 12px
+			font-weight: bold
+			color: #58585A
+			+arial
+			a
+				color: $blue-d 

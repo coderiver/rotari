@@ -9,6 +9,7 @@
 	<meta name="theme-color" content="#fff"> 
 	<!-- <meta name="viewport" content="width=1200"> -->
 	<!-- <meta name="viewport" content="initial-scale=1, user-scalable=no"> -->
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" media="all" href="css/screen.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
@@ -49,14 +50,20 @@
 			</div>
 		</div>
 		<div class="header__menu">
-			<ul>
-				<li><a href="#">головна</a></li>
-				<li><a href="#">про нас</a></li>
-				<li><a href="#">що є ротарi?</a></li>
-				<li><a href="#">вступити</a></li>
-				<li><a href="#">проекти</a></li>
-				<li><a href="#">новини</a></li>
-				<li><a href="#">календар</a></li>
+			<ul class="menu">
+				<li class="js-menu"><a href="#">головна</a></li>
+				<li class="js-menu"><a href="#">про нас</a></li>
+				<li class="js-menu">
+					<a href="#">що є ротарi?</a>
+					<ul class="menu__drop js-menu-drop">
+						<li><a href="#">переваги</a></li>
+						<li><a href="#">обмiн iдеями</a></li>
+					</ul>
+				</li>
+				<li class="js-menu"><a href="#">вступити</a></li>
+				<li class="js-menu"><a href="#">проекти</a></li>
+				<li class="js-menu"><a href="#">новини</a></li>
+				<li class="js-menu"><a href="#">календар</a></li>
 			</ul>
 		</div>
 	</header>
@@ -79,9 +86,9 @@
 			</div>
 			<div class="sidebar__wrap">
 				<h2>інформацiйне засідання</h2>
-				<p><b>Місце:</b> Клуб "Rotary"<br>Україна, м. Київ<br>вул. Івана Франка, д 12</p>
-				<p><b>Час:</b> 17:00 вечора</p>
-				<p><b>Дата:</b> Січень 12, 2014</p>
+				<span><b>Місце:</b> Клуб "Rotary"<br>Україна, м. Київ<br>вул. Івана Франка, д 12</span>
+				<span><b>Час:</b> 17:00 вечора</span>
+				<span><b>Дата:</b> Січень 12, 2014</span>
 			</div>
 			<div class="sidebar__wrap">
 				<h2>Анонс</h2>
@@ -172,14 +179,197 @@
 			</div>
 			<div class="wrap__inn">
 				<h2>фотоальбом</h2>
-				<!-- slider -->
+				<div class="wrap__slider">
+					<div class="slider-for">
+						<div class="slide">
+							<img src="img/slide-b.jpg" alt="">
+							<div class="slide__text">
+								<p>РІ Президент Гаррі С. К. Хуанг називається 106-ї Міжнародної Конвенції Ротарі в замовлення на 6 червня в концертно-розважальний комплекс parque anhembi в Сан-Пауло, Бразилія.</p>
+								<i>Photo Credit: Rotary International/Monika Lozinska</i>
+							</div>
+						</div>
+						<div class="slide">
+							<img src="img/slide-b.jpg" alt="">
+							<div class="slide__text">
+								<p>РІ Президент Гаррі С. К. Хуанг називається 106-ї Міжнародної Конвенції Ротарі в замовлення на 6 червня в концертно-розважальний комплекс parque anhembi в Сан-Пауло, Бразилія.</p>
+								<i>Photo Credit: Rotary International/Monika Lozinska</i>
+							</div>
+						</div>
+						<div class="slide">
+							<img src="img/slide-b.jpg" alt="">
+							<div class="slide__text">
+								<p>РІ Президент Гаррі С. К. Хуанг називається 106-ї Міжнародної Конвенції Ротарі в замовлення на 6 червня в концертно-розважальний комплекс parque anhembi в Сан-Пауло, Бразилія.</p>
+								<i>Photo Credit: Rotary International/Monika Lozinska</i>
+							</div>
+						</div>
+						<div class="slide">
+							<img src="img/slide-b.jpg" alt="">
+							<div class="slide__text">
+								<p>РІ Президент Гаррі С. К. Хуанг називається 106-ї Міжнародної Конвенції Ротарі в замовлення на 6 червня в концертно-розважальний комплекс parque anhembi в Сан-Пауло, Бразилія.</p>
+								<i>Photo Credit: Rotary International/Monika Lozinska</i>
+							</div>
+						</div>
+						<div class="slide">
+							<img src="img/slide-b.jpg" alt="">
+							<div class="slide__text">
+								<p>РІ Президент Гаррі С. К. Хуанг називається 106-ї Міжнародної Конвенції Ротарі в замовлення на 6 червня в концертно-розважальний комплекс parque anhembi в Сан-Пауло, Бразилія.</p>
+								<i>Photo Credit: Rotary International/Monika Lozinska</i>
+							</div>
+						</div>
+						<div class="slide">
+							<img src="img/slide-b.jpg" alt="">
+							<div class="slide__text">
+								<p>РІ Президент Гаррі С. К. Хуанг називається 106-ї Міжнародної Конвенції Ротарі в замовлення на 6 червня в концертно-розважальний комплекс parque anhembi в Сан-Пауло, Бразилія.</p>
+								<i>Photo Credit: Rotary International/Monika Lozinska</i>
+							</div>
+						</div>
+						<div class="slide">
+							<img src="img/slide-b.jpg" alt="">
+							<div class="slide__text">
+								<p>РІ Президент Гаррі С. К. Хуанг називається 106-ї Міжнародної Конвенції Ротарі в замовлення на 6 червня в концертно-розважальний комплекс parque anhembi в Сан-Пауло, Бразилія.</p>
+								<i>Photo Credit: Rotary International/Monika Lozinska</i>
+							</div>
+						</div>
+						<div class="slide">
+							<img src="img/slide-b.jpg" alt="">
+							<div class="slide__text">
+								<p>РІ Президент Гаррі С. К. Хуанг називається 106-ї Міжнародної Конвенції Ротарі в замовлення на 6 червня в концертно-розважальний комплекс parque anhembi в Сан-Пауло, Бразилія.</p>
+								<i>Photo Credit: Rotary International/Monika Lozinska</i>
+							</div>
+						</div>
+					</div>
+					<div class="slider-nav">
+						<img src="img/slide-s1.jpg" alt="">
+						<img src="img/slide-s2.jpg" alt="">
+						<img src="img/slide-s3.jpg" alt="">
+						<img src="img/slide-s4.jpg" alt="">
+						<img src="img/slide-s1.jpg" alt="">
+						<img src="img/slide-s2.jpg" alt="">
+						<img src="img/slide-s3.jpg" alt="">
+						<img src="img/slide-s4.jpg" alt="">
+					</div>
+				</div>
 			</div>
 		</div>
 	</main>
 	<!-- END main -->
 	<!-- BEGIN footer -->
 	<footer class="footer">
-		
+		<div class="footer__inn">
+			<div class="footer__inner">
+				<div class="column">
+					<div class="footer__item">
+						<h2>МІЙ rotary</h2>
+					</div>
+					<div class="footer__item">
+						<h2>ОБМІН ІДЕЯМИ</h2>
+						<ul>
+							<li><a href="#">Дискусійні Групи</a></li>
+							<li><a href="#">Спільнота Ринок</a></li>
+							<li><a href="#">Події</a></li>
+							<li><a href="#">Клуб З'єднання</a></li>
+						</ul>
+					</div>
+					<div class="footer__item">
+						<h2>ЦЕНТР Rotary клуб</h2>
+					</div>
+				</div>
+				<div class="column">
+					<div class="footer__item">
+						<h2>вжити заходів</h2>
+						<ul>
+							<li><a href="#">Дати</a></li>
+							<li><a href="#">Кінець Поліомієліту</a></li>
+							<li><a href="#">Розробляти Проекти</a></li>
+							<li><a href="#">Претендувати На Гранти</a></li>
+							<li><a href="#">Дати Можливість Лідерам</a></li>
+						</ul>
+					</div>
+					<div class="footer__item">
+						<h2>НАВЧАННЯ ТА ДОВІДНИКИ</h2>
+						<ul>
+							<li><a href="#">Вивчити За Ролями</a></li>
+							<li><a href="#">Дізнатися По Темі</a></li>
+							<li><a href="#">Про Ротарі</a></li>
+							<li><a href="#">Політик І Процедур</a></li>
+							<li><a href="#">Документ-Центр</a></li>
+							<li><a href="#">Навчальний Центр</a></li>
+							<li><a href="#">Вебінари</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="column">
+					<div class="footer__item">
+						<h2>Управління</h2>
+						<ul>
+							<li><a href="#">Клуб & Районної Адміністрації</a></li>
+							<li><a href="#">Інструменти</a></li>
+							<li><a href="#">Бренд-Центр</a></li>
+							<li><a href="#">Продукція Та Література До Статті</a></li>
+							<li><a href="#">Подорожі І Витрати</a></li>
+						</ul>
+					</div>
+					<div class="footer__item">
+						<h2>ФОНД rotary</h2>
+						<ul>
+							<li><a href="#">Претендувати На Гранти</a></li>
+							<li><a href="#">Дати</a></li>
+							<li><a href="#">Про</a></li>
+							<li><a href="#">Фонд Звіти</a></li>
+							<li><a href="#">Історія</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="column">
+					<div class="footer__item">
+						<h2>НОВИНИ ТА ЗМІ</h2>
+						<ul>
+							<li><a href="#">Офіс Президента</a></li>
+							<li><a href="#">Журнали</a></li>
+							<li><a href="#">Бюлетені</a></li>
+							<li><a href="#">Роторна Голоси</a></li>
+							<li><a href="#">Оголошення</a></li>
+							<li><a href="#">Медіа-Центр</a></li>
+							<li><a href="#">Новини & Особливості</a></li>
+							<li><a href="#">Роторна Зображень</a></li>
+							<li><a href="#">Поворотні Відеокамери</a></li>
+						</ul>
+					</div>
+					<div class="footer__item">
+						<h2>Змінити мову</h2>
+						<ul>
+							<li><a href="#">Українська мова</a></li>
+							<li><a href="#">Англійська мова</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="footer__wrap">
+				<div class="footer__social">
+					<h2>ми в соціальних мережах:</h2>
+					<div class="socials">
+						<ul>
+							<li><a href="#"><span class="fb"></span></a></li>
+							<li><a href="#"><span class="tw"></span></a></li>
+							<li><a href="#"><span class="vm"></span></a></li>
+							<li><a href="#"><span class="ins"></span></a></li>
+							<li><a href="#"><span class="pi"></span></a></li>
+							<li><a href="#"><span class="yt"></span></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer__info">
+					<a href="#">ЗВ'ЯЖІТЬСЯ З НАМИ</a>
+					<a href="#">КАР'ЄРА ROTARY.ORG</a>
+					<a href="#">КІНЕЦЬ ПОЛІОМІЄЛІТУ ЗАРАЗ</a>
+				</div>
+			</div>
+		</div>
+		<div class="footer__bottom">
+			<div class="copyright">
+				<p>© 2015 Ротарі Інтернешнл. Всі Права Захищені. <a href="#">Політика конфіденційності Умови використання зв'яжіться з нами</a></p>
+			</div>
+		</div>
 	</footer>
 	<!-- END footer -->
 </div>
